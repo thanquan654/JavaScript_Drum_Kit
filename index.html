@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum Kit</title>
+    <link rel="stylesheet" href="./assets/style/style.css">
+</head>
+
+<body>
+    <div class="title">Javascript Drum Kit</div>
+    <div class="drum-container">
+        <img src="./assets/img/drum-kit.png" alt="Drumkit" class="drum">
+        <img src="./assets/img/crash.png" alt="" class="crash">
+        <img src="./assets/img/hihat-top.png" alt="" class="hi-hat">
+
+        <div class="btn" accesskey="k">K</div>
+        <div class="btn" accesskey="i">I</div>
+        <div class="btn" accesskey="j">J</div>
+        <div class="btn" accesskey="e">E</div>
+        <div class="btn" accesskey="r">R</div>
+        <div class="btn" accesskey="g">G</div>
+        <div class="btn" accesskey="h">H</div>
+        <div class="btn" accesskey="v">V</div>
+        <div class="btn" accesskey="b">B</div>
+        <div class="btn" accesskey="f">F</div>
+    </div>
+    <div class="list-key">
+        <h2 class="">Key Maping</h2>
+        <ul class="lists">
+            <li class="item">
+                <div class="btn" accesskey="e">E</div>
+                <span class="desc">Crash</span>
+            </li>
+            <li class="item">
+                <div class="btn" accesskey="r">R</div>
+                <span class="desc">Ride</span>
+            </li>
+            <li class="item">
+                <div class="btn" accesskey="f">F</div>
+                <span class="desc">Floor tom</span>
+            </li>
+            <li class="item">
+                <div class="btn" accesskey="g">G</div>
+                <span class="desc">Mid tom</span>
+            </li>
+            <li class="item">
+                <div class="btn" accesskey="h">H</div>
+                <span class="desc">High tom</span>
+            </li>
+            <li class="item">
+                <div class="btn" accesskey="v">V</div>
+                <div class="btn" accesskey="b">B</div>
+                <span class="desc">Kick</span>
+            </li>
+            <li class="item">
+                <div class="btn" accesskey="j">J</div>
+                <span class="desc">Snare</span>
+            </li>
+            <li class="item">
+                <div class="btn" accesskey="i">I</div>
+                <span class="desc">Hi-hat open</span>
+            </li>
+            <li class="item">
+                <div class="btn" accesskey="k">K</div>
+                <span class="desc">Hi-hat close</span>
+            </li>
+        </ul>
+    </div>
+    <div class="list-audio">
+        <audio src="./assets/sound/src_01-javascript-drum-kit_sounds_crash.wav" data-key="e"></audio>
+        <audio src="./assets/sound/src_01-javascript-drum-kit_sounds_hihat-close.wav" data-key="k"></audio>
+        <audio src="./assets/sound/src_01-javascript-drum-kit_sounds_hihat-open.wav" data-key="i"></audio>
+        <audio src="./assets/sound/src_01-javascript-drum-kit_sounds_kick.wav" data-key="v"></audio>
+        <audio src="./assets/sound/src_01-javascript-drum-kit_sounds_kick.wav" data-key="b"></audio>
+        <audio src="./assets/sound/src_01-javascript-drum-kit_sounds_ride.wav" data-key="r"></audio>
+        <audio src="./assets/sound/src_01-javascript-drum-kit_sounds_snare.wav" data-key="j"></audio>
+        <audio src="./assets/sound/src_01-javascript-drum-kit_sounds_tom-high.wav" data-key="h"></audio>
+        <audio src="./assets/sound/src_01-javascript-drum-kit_sounds_tom-low.wav" data-key="f"></audio>
+        <audio src="./assets/sound/src_01-javascript-drum-kit_sounds_tom-mid.wav" data-key="g"></audio>
+    </div>
+</body>
+<script src="./main.js"></script>
+
+</html>

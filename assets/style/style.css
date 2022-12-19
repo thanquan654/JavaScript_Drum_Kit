@@ -1,0 +1,172 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+body {
+  min-height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.title {
+    font-size: 26px;
+}
+
+.drum-container {
+    position: relative;
+    margin-top: 30px;
+}
+.drum-container .drum {
+    transform: scale(1.5);
+}
+.drum-container .crash {
+    position: absolute;
+    top: 32px;
+    left: -13px;
+    transform: rotate(-7deg) scale(1.5);
+    /* animation: crash-shake .15s linear ; */
+}
+@keyframes crash-shake {
+    0% {
+        transform: rotate(-7deg) scale(1.5);
+    } 50% {
+        transform: rotate(0deg) scale(1.5);
+    } 100% {
+        transform: rotate(-7deg) scale(1.5);
+    }
+}
+.drum-container .hi-hat {
+    position: absolute;
+    top: 90px;
+    right: -24px;
+    transform: scale(1.5);
+    /* animation: hi-hat-down .15s linear; */
+}
+@keyframes hi-hat-down {
+    0% {
+        transform: translateY(0) scale(1.5);
+    } 50% {
+        transform: translateY(2px) scale(1.5);
+    } 100% {
+        transform: translateY(0) scale(1.5);
+    }
+}
+
+.btn {
+    transition: all ease-in-out .042s;
+    position: absolute;
+    background: #eaeaea;
+    line-height: 28px;
+    font-size: 1.2em;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    border-radius: 4px;
+    border: 3px solid #aaa;
+    color: #444;
+    box-shadow: 1px 1px 1px rgb(0 0 0 / 65%);
+    z-index: 2;
+}
+.drum-container .btn[accesskey="k"] {
+    top: 81px;
+    right: -20px;
+}
+.drum-container .btn[accesskey="j"] {
+    top: 210px;
+    right: 60px;
+}
+.drum-container .btn[accesskey="i"] {
+    top: 80px;
+    right: 72px;
+}
+.drum-container .btn[accesskey="e"] {
+    top: 12px;
+    left: -10px;
+}
+.drum-container .btn[accesskey="r"] {
+    top: 12px;
+    left: 65px;
+}
+.drum-container .btn[accesskey="g"] {
+    top: 150px;
+    right: 273px;
+}
+.drum-container .btn[accesskey="h"] {
+    top: 170px;
+    right: 153px;
+}
+.drum-container .btn[accesskey="v"] {
+    top: 320px;
+    right: 227px;
+}
+.drum-container .btn[accesskey="b"] {
+    top: 320px;
+    right: 188px;
+}
+.drum-container .btn[accesskey="f"] {
+    top: 242px;
+    left: 46px;
+}
+
+/* List key */
+.list-key {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111;
+    z-index: 3;
+}
+.list-key h2 {
+    font-size: 1.5em;
+    padding: 30px 0 30px 0;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.lists {
+    list-style: none;
+    margin: 0 40px;
+}
+.lists .item {
+    margin: 12px 0;
+}
+
+.item .btn[accesskey="k"],
+.item .btn[accesskey="j"],
+.item .btn[accesskey="i"],
+.item .btn[accesskey="e"],
+.item .btn[accesskey="r"],
+.item .btn[accesskey="g"],
+.item .btn[accesskey="v"],
+.item .btn[accesskey="h"],
+.item .btn[accesskey="b"],
+.item .btn[accesskey="f"] {
+    display: inline-block;
+    position: unset;
+}
+.item .desc {
+    margin-left: 7px;
+    font-size: 1.3rem;
+    color: #fff;
+}

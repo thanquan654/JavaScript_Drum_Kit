@@ -1,0 +1,47 @@
+const crash = document.querySelector(".crash")
+const hihat = document.querySelector(".hi-hat")
+
+const app = {
+    audios: [...document.querySelectorAll(".list-audio>audio")],
+
+    // Methods
+    playSound:function (key) {
+        const playAudio = this.audios.filter((audio) => {
+            return audio.dataset.key === `${key}`
+        })
+        playAudio[0].play()
+    },
+    setAnimation: function(key) {
+        switch (key) {
+            case "e" || "r":
+                crash.style.animation = `crash-shake .15s linear`
+                setTimeout(() => {
+                    crash.style.animation = "unset"
+                }, 1200)
+                break
+            case "i" || "k":
+                hihat.style.animation = `hi-hat-down .15s linear`
+                setTimeout(() => {
+                hihat.style.animation = `unset`
+                    
+                }, 1200)
+                break
+            default:
+                break;
+        }
+    },
+    handleEvent: function () {
+        // Lắng nghe sự kiện có nút được ấn
+        window.addEventListener("keydown", (e) => {
+            this.playSound(e.key);
+            this.setAnimation(e.key)
+            
+        });
+        
+    },
+    start: function() {
+        this.handleEvent()
+    } 
+}
+
+app.start()
