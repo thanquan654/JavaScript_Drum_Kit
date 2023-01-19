@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Handlee|Pacifico);
 *,
 *:before,
 *:after {
@@ -28,7 +29,10 @@ body {
 }
 
 .title {
-    font-size: 26px;
+    font-family: 'Pacifico', cursive;
+    font-size: 45px;
+    color: #cb2026;
+	text-shadow: 1px 1px 1px #5a0b0d;
 }
 
 .drum-container {
@@ -86,6 +90,13 @@ body {
     box-shadow: 1px 1px 1px rgb(0 0 0 / 65%);
     z-index: 2;
 }
+@keyframes scale {
+    from {
+        transform: scale(0);
+    } to {
+        transform: scale(1.4);
+    }
+}
 .drum-container .btn[accesskey="k"] {
     top: 81px;
     right: -20px;
@@ -135,6 +146,7 @@ body {
     bottom: 0;
     background-color: #111;
     z-index: 3;
+    font-family: 'Handlee', cursive;
 }
 .list-key h2 {
     font-size: 1.5em;

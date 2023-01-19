@@ -1,5 +1,6 @@
 const crash = document.querySelector(".crash")
 const hihat = document.querySelector(".hi-hat")
+const btns = [...document.querySelectorAll(".drum-container .btn")]
 
 const app = {
     audios: [...document.querySelectorAll(".list-audio>audio")],
@@ -11,7 +12,11 @@ const app = {
         })
         playAudio[0].play()
     },
-    setAnimation: function(key) {
+    setAnimation: function (key) {
+        console.log(key)
+        btns.filter((btn) => {
+            return btn.accessKey === `${key}`
+        }).style.animation = "scale .4s linear"
         switch (key) {
             case "e" || "r":
                 crash.style.animation = `crash-shake .15s linear`
